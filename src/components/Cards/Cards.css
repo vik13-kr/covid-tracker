@@ -1,0 +1,28 @@
+/** @format */
+
+.container {
+	padding: 5px 15px;
+	height: 100px;
+	width: 300px;
+	background-color: #475569;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: start;
+	border-radius: 2%;
+}
+
+.title {
+	display: flex;
+	margin-bottom: 5px;
+	font-weight: 500;
+	font-size: larger;
+}
+
+.value {
+	display: flex;
+	margin-bottom: 5px;
+	font-weight: 500;
+	font-size: large;
+}
