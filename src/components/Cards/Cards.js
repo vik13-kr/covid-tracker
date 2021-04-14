@@ -3,12 +3,12 @@
 import React from "react";
 import "./Cards.css";
 
-function Cards() {
+function Cards({ title, value, total_value }) {
 	return (
 		<div className="container">
-			<div className="title"> Cases</div>
-			<div className="value">5475545</div>
-			<div className="total_value">557448856 Total </div>
+			<div className="title"> {title}</div>
+			<div className="value">{value}</div>
+			<div className="total_value">{total_value} Total </div>
 		</div>
 	);
 }

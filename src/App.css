@@ -20,6 +20,14 @@
 	padding: 10px;
 }
 
+.country_selector {
+	width: 200px;
+}
+
+.country_selector > .input {
+	width: 200px;
+}
+
 .body_container {
 	display: flex;
 	flex-direction: row;
