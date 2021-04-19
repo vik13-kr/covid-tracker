@@ -1,0 +1,13 @@
+/** @format */
+
+.table_title {
+	padding: 10px;
+	font-size: larger;
+	font-weight: 500;
+}
+
+.table_container {
+	min-height: 500px;
+	max-height: 500px;
+	overflow-y: auto;
+}

@@ -4,6 +4,9 @@ import { MenuItem, TextField } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
+import ChartComponent from "./components/Chart";
+// import Chart from "./components/Chart";
+import TableComponent from "./components/Table";
 
 function App() {
 	const [covidData, setCovidData] = useState({});
@@ -23,7 +26,7 @@ function App() {
 				.catch((error) => console.log(error));
 			if (response) {
 				setCovidData(response);
-				console.log(response);
+				// console.log(response);
 			}
 		};
 		fetchData();
@@ -55,8 +58,8 @@ function App() {
 		setCountry(e.target.value);
 	};
 
-	console.log(countriesList);
-	console.log(country);
+	// console.log(countriesList);
+	// console.log(country);
 	return (
 		<div className="app">
 			<div className="header">
@@ -66,7 +69,6 @@ function App() {
 				<div className="country_selector">
 					<TextField
 						select
-						label="Select Country"
 						variant="outlined"
 						style={{ width: 200, backgroundColor: "white" }}
 						value={country}
@@ -102,9 +104,15 @@ function App() {
 							total_value={covidData.deaths}
 						/>
 					</div>
-					<div className="map"></div>
+					<div className="chart">
+						<ChartComponent country={country} />
+					</div>
 				</div>
-				<div className="right_container">Hey </div>
+				<div className="right_container">
+					<div className="table__container">
+						<TableComponent />
+					</div>
+				</div>
 			</div>
 		</div>
 	);
